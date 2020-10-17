@@ -1,0 +1,14 @@
+[
+    {
+        "ticketNumber": "ABCDEF00001",
+        "fullName": "Juan Dela Cruz"
+    },
+    {
+        "ticketNumber": "ABCDEF00002",
+        "fullName": "Jayr Añes"
+    },
+    {
+        "ticketNumber": "ABCDEF00003",
+        "fullName": "John Doe"
+    }
+]

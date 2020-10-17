@@ -1,0 +1,21 @@
+<header>
+    <h1>Thanks for attending Devfest PH 2020</h1>
+</header>
+<section [formGroup]="form">
+    <section>
+        <label for="ticketNumber">Ticket number</label>
+        <input formControlName="ticketNumber" type="text" placeholder="ABCDXXXX001" />
+        <small *ngIf="form.controls['ticketNumber'].hasError('required') && (form.controls['ticketNumber'].dirty || form.controls['ticketNumber'].touched)">Ticket number is required.</small>
+        <small *ngIf="!validTicket && form.controls['ticketNumber'].dirty">Ticket number is not valid.</small>
+    </section>
+    <section>
+        <label for="emailAddress">Email address</label>
+        <input formControlName="emailAddress" type="email" placeholder="juandcruz@gmail.com" />
+        <small *ngIf="form.controls['emailAddress'].hasError('required') && (form.controls['emailAddress'].dirty || form.controls['emailAddress'].touched)">Email address is required.</small>
+        <small *ngIf="form.controls['emailAddress'].hasError('pattern') && (form.controls['emailAddress'].dirty || form.controls['emailAddress'].touched)">Email address is not valid.</small>
+    </section>
+    <section>
+        <button (click)="proceed()">proceed</button>
+    </section>
+</section>
+

@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "devfestcertgen"
+    }
+  },
+  "defaultProject": "devfestcertgen",
+  "cli": {
+    "analytics": false
+  }
 }
