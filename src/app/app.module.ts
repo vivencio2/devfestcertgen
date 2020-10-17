@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CertificateComponent } from './certificate/certificate.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ShareModule } from 'ngx-sharebuttons';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ShareModule
   ],
   providers: [],
   bootstrap: [AppComponent]
