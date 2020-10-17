@@ -1,17 +1,20 @@
-<header>
-    <!--Logo-->
-</header>
-<section>
+<section id="certificate">
+    <header>
+        <!--Logo-->
+    </header>
     <section>
-        <h3>This certificate is awarded to</h3>
-        <h1>{{ attendeeName }}</h1>
-        <h3>for attending devfest.ph 2020 on October 17 to 18, 2020</h3>
+        <section>
+            <h3>This certificate is awarded to</h3>
+            <h1>{{ attendeeName }}</h1>
+            <h3>for attending devfest.ph 2020 on October 17 to 18, 2020</h3>
+        </section>
+        <section>
+            <!--Sponsors-->
+        </section>
     </section>
-    <section>
-        <!--Sponsors-->
-    </section>
+    <footer>
+        <button shareButton="facebook" url="https://google.com">share</button>
+        <button (click)="download()">download</button>
+    </footer>
 </section>
-<footer>
-    <button shareButton="facebook" url="https://google.com">share</button>
-    <button>download</button>
-</footer>
+
