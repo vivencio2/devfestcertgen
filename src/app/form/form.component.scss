@@ -6,6 +6,7 @@
   table-layout: fixed;
   font-family: "Space Mono";
 }
+
 input {
   display: block;
   text-align: center;
@@ -50,6 +51,7 @@ section[container] {
   margin: auto;
   border-top: 10px solid #ffcc00;
   padding: 20px;
+  min-width: 300px;
 }
 
 section[control] {

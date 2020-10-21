@@ -1,0 +1,61 @@
+section.certificate {
+  background-image: url("../../assets/images/dot-matrix.png");
+  background-color: #2107c0;
+}
+
+.logo {
+  margin: auto;
+  display: block;
+  padding: 80px 50px;
+}
+
+.symbols {
+  position: absolute;
+  top: 40px;
+  right: 100px;
+}
+
+.globe {
+  position: absolute;
+  top: 400px;
+  left: -140px;
+}
+
+section[content] {
+  text-align: center;
+  color: #fff;
+}
+
+section[control] {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 200;
+  margin: 20px 20px;
+}
+
+h1[attendee] {
+  font-size: 45px;
+  margin: 20px 20px;
+}
+
+h4 {
+  font-family: "Space Mono";
+  font-size: 20px;
+  font-weight: 100;
+  &[ticket] {
+    margin: 50px 50px;
+    display: block;
+  }
+}
+
+small {
+  display: block;
+  margin: 100px 50px;
+  font-family: "Space Mono";
+  font-size: 18px;
+}

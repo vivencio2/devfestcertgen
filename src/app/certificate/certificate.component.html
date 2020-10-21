@@ -1,20 +1,17 @@
-<section id="certificate">
-    <section>
-        <!--Logo-->
-    </section>
-    <section>
-        <section>
-            <h3>This certificate is awarded to</h3>
-            <h1>{{ attendeeName }}</h1>
-            <h3>for attending devfest.ph 2020 on October 17 to 18, 2020</h3>
-        </section>
-        <section>
-            <!--Sponsors-->
-        </section>
+<section id="certificate" class="certificate">
+    <img src="../../assets/images/devfest-logo.png" class="logo" height="150" />
+    <img src="../../assets/images/symbols.png" class="symbols" height="130" />
+    <img src="../../assets/images/pixel-globe.png" class="globe" />
+    <section content>
+        <h1>Certificate of Attendance</h1>
+        <h4>This is to certify</h4>
+        <h1 attendee>{{ attendeeName }}</h1>
+        <h4>has attended GDG Philippines Devfest 2020<br>hosted online on October 17-18, 2020</h4>
+        <h4 ticket>ID: #GOOGLE200224527</h4>
+        <small>This is a computer generated certificate. it is valid without  a signature.</small>
     </section>    
 </section>
-<section>
-    <button shareButton="facebook" url="https://google.com">share</button>
+<section control>
+    <button shareButton="facebook">share</button>
     <button (click)="download()">download</button>
 </section>
-

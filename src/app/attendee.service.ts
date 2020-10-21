@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import master from '../assets/master.json'
+import master from '../app/master.json';
 @Injectable({
     providedIn: 'root'
   })
