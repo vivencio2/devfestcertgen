@@ -17,7 +17,7 @@ section.certificate {
 
 .globe {
   position: absolute;
-  top: 400px;
+  top: 800px;
   left: -140px;
 }
 
@@ -29,7 +29,7 @@ section[content] {
 section[control] {
   display: block;
   margin: auto;
-  width: 50%;
+  text-align: center;
 }
 
 h1 {
@@ -58,4 +58,55 @@ small {
   margin: 100px 50px;
   font-family: "Space Mono";
   font-size: 18px;
+}
+
+button {
+  background-color: #44c767;
+  border: 1px solid #18ab29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 8px 31px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+  font-family: "Space Mono";
+  margin: 10px;
+  &:focus {
+    outline: #44c767 auto 1px;
+  }
+  width: 250px;
+}
+
+@media screen and (max-width: 1115px) {
+  .globe,
+  .symbols {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  h1 {
+    font-size: 40px;
+    font-weight: 100;
+    margin: 15px 15px;
+  }
+
+  h1[attendee] {
+    font-size: 25px;
+    margin: 10px 10px;
+  }
+
+  h4 {
+    font-size: 15px;
+  }
+
+  small {
+    font-size: 12px;
+  }
+
+  .logo {
+    height: 100px;
+  }
 }

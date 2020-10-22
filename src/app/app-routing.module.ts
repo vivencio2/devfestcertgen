@@ -11,9 +11,8 @@ const routes: Routes = [
 
   },
   {
-    path:'certificate/:key',
+    path:'certificate/:cert/:attf/:attl',
     component: CertificateComponent,
-    pathMatch: 'full'
   }
 ];
 

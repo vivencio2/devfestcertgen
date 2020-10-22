@@ -13,7 +13,6 @@ import { AttendeeService } from '../attendee.service';
 export class FormComponent {
   form: FormGroup;
   validTicket: boolean = true;
-
   constructor(private router: Router, private encryptionService: EncryptionService, private builder: FormBuilder, private attendeeService: AttendeeService) { 
     this.form = this.builder.group({
       'emailAddress': [null, Validators.compose([Validators.required, Validators.pattern(/^(\d{10}|\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}))$/)])],
@@ -23,10 +22,8 @@ export class FormComponent {
 
   proceed(): void {
     this.touched(this.form);
-    this.validTicketNumber(this.form.controls["ticketNumber"].value);
-    if(this.form.valid && !!this.validTicket) {
-      var key = this.encryptionService.encrypt(this.form.controls["ticketNumber"].value);
-    this.router.navigate(['/certificate/'+ encodeURIComponent(key)]);
+    if(this.form.valid) {
+      this.validTicketNumber(this.form.controls["ticketNumber"].value);
     }
   }
 
@@ -39,11 +36,14 @@ export class FormComponent {
   };
 
   validTicketNumber(ticketNumber: string) {
-    var attendee = this.attendeeService.filter(ticketNumber);
-    if (attendee == undefined || attendee == null || attendee.length == 0) {
-      this.validTicket = false;
-    } else {
-      this.validTicket = true;
-    }
+    this.attendeeService.validateAttendee(ticketNumber).subscribe(result => {
+      if(result !== undefined) {
+        this.validTicket = result.isValid;
+        var firstName = this.encryptionService.base64Encode(result.firstName);
+        var lastName = this.encryptionService.base64Encode(result.lastName);
+        var cert = this.encryptionService.base64Encode(this.form.controls["ticketNumber"].value);
+        this.router.navigate(['/certificate/'+ encodeURIComponent(cert) + '/' + encodeURIComponent(firstName) + '/' + encodeURIComponent(lastName)]);
+      }
+    });
   }
 }

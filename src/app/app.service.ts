@@ -14,7 +14,13 @@ export class EncryptionService {
       return CryptoJS.AES.encrypt(value, environment.encryptionKey.trim()).toString();
     }  
     
-    decrypt(textToDecrypt : string){
-      return CryptoJS.AES.decrypt(textToDecrypt, environment.encryptionKey.trim()).toString(CryptoJS.enc.Utf8);
+    decrypt(value : string){
+      return CryptoJS.AES.decrypt(value, environment.encryptionKey.trim()).toString(CryptoJS.enc.Utf8);
+    }
+    base64Encode(value: string){
+      return btoa(value);
+    }
+    base64Decode(value: string){
+      return atob(value);
     }
 }
