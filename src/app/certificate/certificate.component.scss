@@ -1,24 +1,46 @@
 section.certificate {
-  background-image: url("../../assets/images/dot-matrix.png");
-  background-color: #2107c0;
+  width: calc(100% - 2rem);
+  height: calc(70.71vw - 2rem);
+  margin: 1rem;
+  border: 6px solid white;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  
+  @media screen and (min-width: 800px) {
+    transform: scale(0.8) translateY(-50px);
+    position: absolute
+  }
+
+  @media screen and (min-width: 1400px) {
+    transform: scale(0.6) translateY(-200px);
+  }
+
+  @media screen and (min-width: 1920px) {
+    transform: scale(0.6) translateY(-300px);;
+  }
 }
 
 .logo {
   margin: auto;
   display: block;
-  padding: 80px 50px;
+  margin-top: 5vw;
+  margin-bottom: 3vw;
+  width: 15%;
 }
 
 .symbols {
   position: absolute;
-  top: 40px;
-  right: 100px;
+  top: 4vw;
+  right: 5vw;
+  width: 17%;
 }
 
 .globe {
   position: absolute;
-  top: 800px;
-  left: -140px;
+  bottom: 5vw;
+  left: -8.5vw;
+  width: 20%;
 }
 
 section[content] {
@@ -32,81 +54,111 @@ section[control] {
   text-align: center;
 }
 
-h1 {
-  font-size: 70px;
-  font-weight: 200;
-  margin: 20px 20px;
+section[instructions] {
+
+  h1 {
+    text-align: center;
+    display: block;
+    color: white;
+    font-size: calc(1rem + 1vw);
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Space Mono";
+    color: orange;
+
+    @media screen and (min-width: 800px) {
+      text-align: left;
+      padding-left: calc(40px + 2vw);
+      margin-bottom: 0
+    }
+
+  }
+  
+  p {
+    text-align: center;
+    display: block;
+    color: white;
+    font-size: calc(0.75rem + 0.75vw);
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Space Mono";
+    color: white;
+    
+    @media screen and (min-width: 800px) {
+      text-align: left;
+      padding-left: calc(40px + 2vw);
+      margin-top: 0
+    }
+
+  }
+
+}
+
+
+h1[title] {
+  font-weight: normal;
+  font-size: 6vw !important;
+  margin-top: 0;
+  margin-bottom: 3.5vw !important;
 }
 
 h1[attendee] {
-  font-size: 45px;
-  margin: 20px 20px;
+  font-size: 3.75vw !important;
+  margin: 1.5vw;
+  font-family: "Space Mono";
 }
 
 h4 {
+  margin: 1vw;
   font-family: "Space Mono";
-  font-size: 20px;
+  font-size: 1.75vw;
   font-weight: 100;
   &[ticket] {
-    margin: 50px 50px;
+    margin: 3vw;
     display: block;
   }
 }
 
 small {
   display: block;
-  margin: 100px 50px;
+  bottom: 6.5vw;
+  position: absolute;
+  width: 100%;
+  display: block;
   font-family: "Space Mono";
-  font-size: 18px;
+  font-size: 1.25vw;
 }
 
-button {
-  background-color: #44c767;
-  border: 1px solid #18ab29;
-  display: inline-block;
+button[download] {
+  background-color: #fa3c24;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: bold;
   padding: 8px 31px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #2f6627;
+  border: none;
+  border-radius: 0;
   font-family: "Space Mono";
-  margin: 10px;
-  &:focus {
-    outline: #44c767 auto 1px;
+  margin: 15px;
+  outline: none;
+  &:hover {
+    background-color: lighten(#fa3c24, 5);
   }
-  width: 250px;
-}
-
-@media screen and (max-width: 1115px) {
-  .globe,
-  .symbols {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 820px) {
-  h1 {
-    font-size: 40px;
-    font-weight: 100;
-    margin: 15px 15px;
+  &:active {
+    background-color: darken(#fa3c24, 5);
   }
 
-  h1[attendee] {
-    font-size: 25px;
-    margin: 10px 10px;
-  }
-
-  h4 {
-    font-size: 15px;
-  }
-
-  small {
-    font-size: 12px;
-  }
-
-  .logo {
-    height: 100px;
+  @media screen and (min-width: 800px) {
+    position: absolute;
+    top: 55px;
+    right: calc(40px + 2vw);
+    margin-top: 0;
+    font-size: 1.25rem;
   }
 }
