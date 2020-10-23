@@ -1,9 +1,15 @@
+<main>
+    <section instructions>
+        <h1>Here's your certificate</h1>
+        <p>Download now to share with your friends!</p>
+    </section>
+    
 <section id="certificate" class="certificate">
-    <img src="../../assets/images/devfest-logo.png" class="logo" height="150" />
-    <img src="../../assets/images/symbols.png" class="symbols" height="130" />
+    <img src="../../assets/images/devfest-logo.png" class="logo" />
+    <img src="../../assets/images/symbols.png" class="symbols"/>
     <img src="../../assets/images/pixel-globe.png" class="globe" />
     <section content>
-        <h1>Certificate of Attendance</h1>
+        <h1 title>Certificate of Attendance</h1>
         <h4>This is to certify</h4>
         <h1 attendee>{{ attendeeFirstName }} {{attendeeLastName}}</h1>
         <h4>has attended GDG Philippines Devfest 2020<br>hosted online on October 17-18, 2020</h4>
@@ -13,5 +19,10 @@
 </section>
 <section control>
     <!-- <button shareButton="facebook">share</button> -->
-    <button (click)="download()">download</button>
+    <button download (click)="download()">
+        <svg style="width:24px;height:24px; margin-right: 8px" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+        </svg>
+        <span>download</span></button>
 </section>
+</main>
