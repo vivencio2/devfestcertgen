@@ -1,15 +1,16 @@
 section.certificate {
   width: calc(100% - 2rem);
-  height: calc(70.71vw - 2rem);
-  margin: 1rem;
-  border: 6px solid white;
+  height: calc(70.71vw - 1.5rem);
+  margin: auto;
+  border: 3px solid white;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
   
   @media screen and (min-width: 800px) {
+    border: 6px solid white;
+    width: calc(100% - 4rem);
     transform: scale(0.8) translateY(-50px);
-    position: absolute
   }
 
   @media screen and (min-width: 1400px) {
@@ -17,7 +18,7 @@ section.certificate {
   }
 
   @media screen and (min-width: 1920px) {
-    transform: scale(0.6) translateY(-300px);;
+    transform: scale(0.6) translateY(-350px);;
   }
 }
 
@@ -56,6 +57,10 @@ section[control] {
 
 section[instructions] {
 
+  @media screen and (min-width: 800px) {
+    max-width: 50%;
+  }
+
   h1 {
     text-align: center;
     display: block;
@@ -70,7 +75,7 @@ section[instructions] {
     @media screen and (min-width: 800px) {
       text-align: left;
       padding-left: calc(40px + 2vw);
-      margin-bottom: 0
+      margin-bottom: 0;
     }
 
   }
@@ -121,14 +126,22 @@ h4 {
   }
 }
 
-small {
-  display: block;
-  bottom: 6.5vw;
-  position: absolute;
-  width: 100%;
-  display: block;
-  font-family: "Space Mono";
-  font-size: 1.25vw;
+section[signatory] {
+  
+  position: relative;
+
+  img {
+  }
+
+  p[name] {
+    font-size: 1.75vw;
+  }
+
+  p {
+    font-size: 1.5vw;
+    transform: translateY(-4.5vw);
+    margin: 0.25vw;
+  }
 }
 
 button[download] {
