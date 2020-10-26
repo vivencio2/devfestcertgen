@@ -12,6 +12,8 @@ input {
   text-align: center;
   margin: auto;
   width: 50%;
+  margin-bottom: 0.5em;
+  margin-top: 0.25em;
   font-family: "Space Mono";
   &:focus {
     outline: #2107c0 auto 1px;
@@ -29,7 +31,7 @@ input {
     color: transparent;
   }
   width: 250px;
-  height: 24px;
+  height: 28px;
 }
 
 label {
@@ -45,13 +47,46 @@ section > h1 {
   color: #fff;
 }
 
+main {
+  @media screen and (min-width: 1700px) {
+    transform: scale(1.15)
+  }
+}
+
 section[container] {
   background-color: #fff;
   width: 30%;
   margin: auto;
-  border-top: 10px solid #ffcc00;
+  border-top: 20px solid #ffcc00;
   padding: 20px;
   min-width: 300px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -17px;
+    left: 4px;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: green;
+  }
+  
+}
+
+section[faq] {
+  color: white;
+  min-width: 300px;
+  width: 30%;
+  margin: auto;
+  padding: 1.25em 0.5em;
+}
+
+details[faq-item] summary {
+  margin-bottom: 1em;
+  outline: none !important;
+  cursor: pointer;
 }
 
 section[control] {
@@ -61,23 +96,59 @@ section[control] {
 small {
   display: block;
   color: red;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 button {
-  background-color: #44c767;
-  border: 1px solid #18ab29;
+  background-color: #fa3c24;
+  border: none;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
   padding: 8px 31px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #2f6627;
+  border-radius: 0px;
   font-family: "Space Mono";
-  &:focus {
-    outline: #44c767 auto 1px;
+  &:hover {
+    background-color: lighten(#fa3c24, 5);
   }
-  width: 250px;
+  &:active {
+    background-color: darken(#fa3c24, 5);
+  }
+  width: 256px;
+}
+
+footer {
+  border-top: 1px solid white;
+  margin: 1em;
+  margin-top: 6em;
+  padding: 1em;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1700px) {
+    margin-top: 10em;
+  }
+}
+
+ul[social-links]{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: center;
+  list-style: none;
+  font-family: 'Product Sans';
+}
+
+li[social-link]{
+  display: flex;
+  align-items: center;
+  margin-left: 0.5em;
+  padding: 0.5em;
 }
